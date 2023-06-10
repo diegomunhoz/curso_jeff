@@ -20,9 +20,8 @@ contract Comissao {
     }
 
     // Calcular a comissão
-    function calculaComissao(uint256 valorVenda) public view returns(uint256 comissao) {
-        comissao = fatorBonus*valorVenda;
-        return comissao;
+    function calculaComissao(uint256 valorVenda) public view returns(uint256) {
+        return fatorBonus*valorVenda;
     }
 
 }
