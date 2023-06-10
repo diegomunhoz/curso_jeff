@@ -13,16 +13,23 @@ contract Aluguel {
     // Nome do locatario
     string public nomeLocatario;
 
-    // Array dos valores do aluguel de 36 meses
-    uint256[36] public valorAluguel;
+    // Array dos valores do aluguel
+    uint[] public valorAluguel;
 
     // Construtor padrão
     constructor(string memory locador, string memory locatario, uint aluguel)  {
+
+        // Atribuição do nome do locador
         nomeLocador = locador;
+
+        // Atribuição do nome do locatario
         nomeLocatario = locatario;
-        for (uint256 i = 0; i < 36; i++) {
+
+        // Laço para valorização
+        for (uint i = 0; i < 36; i++) {
             valorAluguel[i] = aluguel;
         }
+
     }
 
     // Função para buscar o valor do aluguel em um mês específico
@@ -57,11 +64,11 @@ contract Aluguel {
     }
 
     // Função para efetuar reajuste do valor do aluguel recebendo o mês incial e valor
-    function aplicaAjusteAluguel(uint256 mesInicial, uint256 valor) public {
+    function aplicaAjusteAluguel(uint mesInicial, uint valor) public {
         if (mesInicial > 36) {
             revert("Mes invalido");
         }
-        uint256 ind = mesInicial - 1;
+        uint ind = mesInicial - 1;
         for (uint i = ind; i < 36; i++) {
             valorAluguel[i] += valor;
         }
