@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
 
+/*
+* Contrato: 0x6Fb00278D1db735f624D29EC84FB13bEC2ddB5b9
+*/
+
 contract Aula02 {
 
     string public nomeVendedor;
