@@ -50,7 +50,7 @@ contract Aluguel {
             revert("Mes invalido");
         }
         uint256 ind = mesInicial - 1;
-        for (uint i = mesInicial; i < ind; i++) {
+        for (uint i = ind; i < 36; i++) {
             valorAluguel[i] += valor;
         }
     }
