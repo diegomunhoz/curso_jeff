@@ -40,11 +40,17 @@ contract Aluguel {
             nomeLocador = novoNome;
         } else if (tipoPessoa == 2) {
             nomeLocatario = novoNome;
+        } else {
+            revert("Tipo de pessoa invalido");
         }
     }
 
     function aplicaAjusteAluguel(uint256 mesInicial, uint256 valor) public {
-        for (uint i = mesInicial; i < 36; i++) {
+        if (mesInicial > 36) {
+            revert("Mes invalido");
+        }
+        uint256 ind = mesInicial - 1;
+        for (uint i = mesInicial; i < ind; i++) {
             valorAluguel[i] += valor;
         }
     }
