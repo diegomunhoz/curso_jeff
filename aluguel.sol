@@ -2,10 +2,10 @@
 pragma solidity 0.8.20;
 
 /*
-*Contrato -
+*Contrato - 0xb21EB87Bc14a97D0e302c576DcDf20c4a02cD304
 */
 
-contract New {
+contract Aluguel {
 
     string public nomeLocador;
     string public nomeLocatario;
