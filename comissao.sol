@@ -14,7 +14,7 @@ contract Comissao {
     uint256 public fatorBonus;
 
     // Construtor padrão
-    constructor(string memory vendedor, uint256 fator)  {
+    constructor(string memory vendedor, uint256 fator) {
         nomeVendedor = vendedor;
         fatorBonus = fator;
     }
